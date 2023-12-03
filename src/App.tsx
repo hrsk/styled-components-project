@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
-import {Rotate} from "./styles";
+import {Box, Button, Link} from "./styles";
 
 export function App() {
     return (
@@ -15,45 +15,6 @@ export function App() {
     );
 }
 
-const Button = styled.button`
-  color: #BF4F74;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #BF4F74;
-  border-radius: 3px;
-  display: block;
-
-  &:hover {
-    cursor: pointer;
-    animation: ${Rotate} 2s ease-in-out;
-  }
-`;
-
 const SupperButton = styled(Button)`
   background-color: burlywood;
-`
-const Link = styled.a`
-  background-color: chartreuse;
-  text-align: center;
-  text-decoration: none;
-`
-
-const Box = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: cadetblue;
-  gap: 10px;
-
-  a {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-;
 `
