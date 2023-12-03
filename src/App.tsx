@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import {Rotate} from "./styles/animations";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export function App() {
+    return (
+        <div className="App">
+            <h3>STYLED COMPONENTS PROJECT</h3>
+            <Button onClick={() => alert('is clicked')}>FIRST STYLED COMPONENT</Button>
+        </div>
+    );
 }
 
-export default App;
+const Button = styled.button`
+  width: 200px;
+  height: 40px;
+  align-content: center;
+  border-radius: 7px;
+  border: solid 1px black;
+  font-size: medium;
+  background-color: brown;
+
+  &:hover {
+    cursor: pointer;
+    animation: ${Rotate} 2s ease-in-out;
+  }
+`
