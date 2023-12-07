@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {Rotate} from "../animations";
+import {Theme} from "../themes/Theme";
 
 type ButtonPropsType = {
     color?: string
@@ -29,5 +30,9 @@ export const Button = styled.button<ButtonPropsType>`
       cursor: pointer;
       animation: ${Rotate} 2s ease-in-out;
     }
+  `}
+  
+  ${Theme.colors.grey.light && css<ButtonPropsType>`
+    color: white;
   `}
 `;

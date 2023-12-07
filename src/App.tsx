@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 import {Box, Button} from "./styles";
+import {Theme} from "./styles/themes/Theme";
 
 export function App() {
     return (
@@ -12,8 +13,8 @@ export function App() {
             <Button as={'a'} href={'#'} onClick={() => alert('is clicked')}>BUTTON LINK</Button>
             <Button as={Link} href={'#'} onClick={() => alert('is clicked')}>LINK BUTTON</Button>*/}
 
-            <Button primary color={'black'} background={'yellow'} onClick={() => alert('is clicked')}>FIRST STYLED COMPONENT</Button>
-            <Button secondary color={'black'} background={'cyan'} onClick={() => alert('is clicked')}>FIRST STYLED COMPONENT</Button>
+            <Button primary color={'black'} background={Theme.colors.yellowColor} onClick={() => alert('is clicked')}>FIRST STYLED COMPONENT</Button>
+            <Button secondary color={'black'} background={Theme.colors.grey.dark} onClick={() => alert('is clicked')}>FIRST STYLED COMPONENT</Button>
 
         </Box>
     );

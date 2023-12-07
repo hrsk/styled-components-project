@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Theme} from "../themes/Theme";
 
 export const Box = styled.div`
   height: 100vh;
@@ -6,7 +7,7 @@ export const Box = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: cadetblue;
+  background-color: ${Theme.colors.grey.light};
   gap: 10px;
 
   a {
